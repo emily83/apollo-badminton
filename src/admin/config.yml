@@ -1,8 +1,8 @@
 backend:
   name: git-gateway
   branch: main
-media_folder: "public/assets/blog"
-public_folder: "/assets/blog"
+media_folder: "public/assets/media"
+public_folder: "/assets/media"
 collections: 
   - name: "blog"
     label: "Blog"
@@ -18,3 +18,11 @@ collections:
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "src/gallery"
+    create: true
+    summary: "{{ image }}"
+    fields:
+      - { label: "Image", name: "image", widget: "image" }
