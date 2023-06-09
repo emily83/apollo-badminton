@@ -6,7 +6,7 @@ date: 2023-06-09T20:34:48.821Z
 tags:
   - post
   - featured
-image: /assets/blog/20210418_123113.jpg
+image: /assets/media/20210418_214234.jpg
 imageAlt: caption
 ---
 # H﻿eading 1
