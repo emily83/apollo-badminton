@@ -21,8 +21,10 @@ collections:
 
   - name: "gallery"
     label: "Gallery"
+    label_singular: "Gallery Image"
     folder: "src/gallery"
     create: true
     summary: "{{ image }}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image caption", name: "caption", widget: "string" }

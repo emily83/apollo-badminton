@@ -1,0 +1,16 @@
+--- 
+title: Gallery
+layout: 'base.njk'
+---
+
+<h1>{{ title }}</h1>
+<section id="gallery">
+  {% for item in collections.gallery %}
+    <figure>
+      <img src="{{ item.data.image }}" alt="{{ item.data.caption }}">
+        <figcaption>
+          {{ item.data.caption }}
+        </figcaption>
+      </figure>
+    {% endfor %}
+  </section>
