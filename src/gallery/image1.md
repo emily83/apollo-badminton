@@ -1,4 +1,4 @@
 ---
-image: /assets/media/article-1.jpg
+image: /assets/media/image1.jpg
 caption: 'Article 1'
 ---

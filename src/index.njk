@@ -1,33 +1,39 @@
 --- 
 title: My Homepage
 layout: 'base.njk'
+hero: false
 ---
 
-<section class="hero">
-  <div class="container flow">
-    <div class="hero__content flow">
-      <h1 class="section-title">Welcome to my blog!</h1>
-      <p>I use this space to document my adventures in front-end development, sharing how I’ve overcome issues I’ve run into,
-        useful resources, and more.</p>
-      <p>Below are some of my favourite articles, or you can go to the blog page to see my most recent posts.</p>
-      <div class="flex-group">
-        <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
-        <a href="./blog" class="btn btn--neutral">Most recent articles</a>
-      </div>
-    </div>
-    <div>
-      <img src="//unsplash.it/510" alt="" class="hero__image">
-    </div>
-  </div>
+<section id="home-hero-container">
+  <img src="assets/racket-and-shuttle.jpg" alt="" class="hero-image">
 </section>
-<section id="featured-articles" class="featured-articles">
-  <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
-    <ul role="list" class="articles__list flow">
-      {% for post in collections.featured | reverse %}
-        {% include 'article-snippet.njk' %}
-      {% endfor %}
-    </ul>
-  </div>
+
+<section id="home-headline-container">
+  <section class="home-headline">
+    <img src="assets/social.jpg" alt="">
+    <h2>Social</h2>
+    <p>Come along to our club nights where  members and non-members can play socially for just £5 per session.</p>
+  </section>
+  <section class="home-headline">
+    <img src="assets/competitive.jpg" alt="">
+    <h2>Competitive</h2>
+    <p>During the league season, we field men’s, ladies, mixed and composite league teams in the local North Foreland area.</p>
+  </section>
+  <section class="home-headline">
+    <img src="assets/welcoming.jpg" alt="">
+    <h2>Welcoming</h2>
+    <p>We play on Thursday nights from 7:30 - 10p.m. at St Anselms School Sports Hall, Canterbury.</p>
+  </section>
 </section>
+<div class="page-content">
+  <h1>Welcome to Apollo Badminton Club!</h1>
+  <p>We play on Thursday nights from 7:30 to 10:00pm at St Anselms School Sports Hall,
+    behind the school in the large green building with ample parking spaces. Look out for a big sign on the neaby roadside
+    fence. We play on 4 courts during non-school exam times.</p>
+  <p>At our club we play both league and social badminton and welcome new members who wish to play badminton with no
+    pressure to play league but offer the opportunity to play in our teams to those who do. We field men’s teams, mixed
+    teams and composite teams in the local North Foreland Area.</p>
+  <p>The cost of the summer club evenings is £5. You'll need to bring your own racquet and a good safe pair of trainers,
+    all other equipment is supplied. The summer club runs from June until the end of August.</p>
+</div>
+

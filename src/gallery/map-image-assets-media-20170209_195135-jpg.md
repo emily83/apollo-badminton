@@ -1,4 +1,4 @@
 ---
-image: /assets/media/20170209_195135.jpg
+image: /assets/media/image3.jpg
 caption: 'A caption'
 ---

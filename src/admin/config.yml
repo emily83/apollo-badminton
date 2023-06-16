@@ -28,3 +28,33 @@ collections:
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Image caption", name: "caption", widget: "string" }
+      
+  - name: "fixtures"
+    label: "Fixtures"
+    folder: "src/fixtures"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields: 
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Team", 
+        name: "team",
+        widget: "select"
+        options:
+          - { label: "Mens", value: "MEN" }
+          - { label: "Composite", value: "CMP" }
+          - { label: "Mixed", value: "HMIXND" }
+      - label: "Opponent", 
+        name: "opponent",
+        widget: "select"
+        options:
+          - { label: "Ajax", value: "AJX" }
+          - { label: "Apollo Ashford", value: "APA" }
+          - { label: "Christchurch", value: "CHR" }
+          - { label: "Herne Bay", value: "HRN" }
+          - { label: "Invicta Pilgrims", value: "INC" }
+          - { label: "Kings", value: "KNG" }
+          - { label: "Faversham", value: "FAV" }
+          - { label: "Hartsdown Park", value: "HRT" }
+          - { label: "Racqueteers", value: "RCQ" }
+          - { label: "Rovers", value: "ROV" }
+          - { label: "Westgate", value: "WST" }

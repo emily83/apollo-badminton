@@ -4,8 +4,23 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{{ title }}</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/style.css">
         <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+        <script type="module">
+            import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+            const lightbox = new PhotoSwipeLightbox({
+                gallery: '#gallery',
+                children: 'a',
+                pswpModule: () => import ('/photoswipe/photoswipe.esm.js'),
+                bgClickAction: 'close'
+            });
+            lightbox.init();
+        </script>
+        <link rel="stylesheet" href="/photoswipe/photoswipe.css">
     </head>
     <body>
         {% include 'header.njk' %}
@@ -13,7 +28,6 @@
             {{ content | safe }}
         </main>
         {% include 'footer.njk' %}
-        
         <script>
             if (window.netlifyIdentity) {
                 window.netlifyIdentity.on("init", user => {
@@ -23,6 +37,13 @@
                         });
                     }
                 });
+            }
+            const hamburger = document.querySelector(".hamburger");
+            const navMenu = document.querySelector(".nav-menu");
+            hamburger.addEventListener("click", mobileMenu);
+            function mobileMenu() {
+                hamburger.classList.toggle("active");
+                navMenu.classList.toggle("active");
             }
         </script>
     </body>
