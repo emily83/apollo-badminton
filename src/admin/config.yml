@@ -27,14 +27,14 @@ collections:
     summary: "{{ image }}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Image caption", name: "caption", widget: "string" }
+      - { label: "Image caption", name: "caption", widget: "string", required: false }
       
   - name: "fixtures"
     label: "Fixtures"
     label_singular: "Fixture"
     folder: "src/fixtures"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{date}}-{{team}}-{{opponent}}"
     fields: 
       - { label: "Date", name: "date", widget: "datetime" }
       - label: "Team"
@@ -43,7 +43,7 @@ collections:
         options:
           - { label: "Mens", value: "MEN" }
           - { label: "Composite", value: "CMP" }
-          - { label: "Mixed", value: "HMIXND" }
+          - { label: "Mixed", value: "MIX" }
       - label: "Opponent"
         name: "opponent"
         widget: "select"
