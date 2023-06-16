@@ -34,7 +34,7 @@ collections:
     label_singular: "Fixture"
     folder: "src/fixtures"
     create: true
-    slug: "{{date}}-{{team}}-{{opponent}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
     fields: 
       - { label: "Date", name: "date", widget: "datetime" }
       - label: "Team"
