@@ -36,15 +36,15 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
       - { label: "Date", name: "date", widget: "datetime" }
-      - label: "Team", 
-        name: "team",
+      - label: "Team"
+        name: "team"
         widget: "select"
         options:
           - { label: "Mens", value: "MEN" }
           - { label: "Composite", value: "CMP" }
           - { label: "Mixed", value: "HMIXND" }
-      - label: "Opponent", 
-        name: "opponent",
+      - label: "Opponent"
+        name: "opponent"
         widget: "select"
         options:
           - { label: "Ajax", value: "AJX" }
