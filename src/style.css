@@ -490,6 +490,10 @@ header.hero {
   Conctact Us
   /////////////////////// */
 
+#contact-form .hidden {
+  display: none;
+}
+
 .find-us {
   background-color: var(--clr-neutral-800);
   color: var(--clr-neutral-100);
