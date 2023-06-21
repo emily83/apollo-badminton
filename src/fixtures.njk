@@ -1,0 +1,14 @@
+--- 
+title: Fixtures
+layout: 'base.njk'
+---
+
+<section class="page-content">
+  <h1>{{ title }}</h1>
+  <ul id="fixtures">
+    {% for fixture in collections.futureFixtures %}
+      {% include 'fixture.njk' %}
+    {% endfor %}
+    
+  </ul>
+</section>

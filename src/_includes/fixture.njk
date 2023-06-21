@@ -1,0 +1,26 @@
+<li class="fixture" data-team="{{ fixture.data.team }}">
+  <h3 class="fixture-date">{{ fixture.data.date | postDateDay }}</h3>
+  <h2 class="fixture-match">
+    {% if fixture.data.location == 'H' %}
+      Apollo vs
+    {% endif %}   
+    <strong>
+      {% if fixture.data.opponent in helpers.opponents %}
+        {{ helpers.opponents[fixture.data.opponent] }}
+      {% else %}
+        {{ fixture.data.opponent }}
+      {% endif %}
+    </strong>
+    {% if fixture.data.location == 'A' %}
+      vs Apollo
+    {% endif %} 
+  </h2>
+  <span class="fixture-team">
+    {% if fixture.data.team in helpers.teams %}
+      {{ helpers.teams[fixture.data.team] }}
+    {% else %}
+      {{ fixture.data.team }}
+    {% endif %}
+  </span>
+  <span class="fixture-location">({{ fixture.data.location }})</span>
+</li>

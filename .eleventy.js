@@ -17,6 +17,10 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
     })
 
+    eleventyConfig.addFilter("postDateDay", (dateObj) => {
+        return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy");
+      });
+
     eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt) {
         if (alt === undefined) {
             // throw an error on missing alt (alt="" works okay)
@@ -27,21 +31,21 @@ module.exports = function (eleventyConfig) {
 
         const metadata = await sharp(src).metadata();
 
-        if (metadata.width )
+        if (metadata.width)
 
-        if (metadata.height > metadata.width) {
-            if (metadata.width > PORTRAIT_LIGHTBOX_IMAGE_WIDTH) {
-                lightboxImageWidth = PORTRAIT_LIGHTBOX_IMAGE_WIDTH;
+            if (metadata.height > metadata.width) {
+                if (metadata.width > PORTRAIT_LIGHTBOX_IMAGE_WIDTH) {
+                    lightboxImageWidth = PORTRAIT_LIGHTBOX_IMAGE_WIDTH;
+                } else {
+                    lightboxImageWidth = metadata.width;
+                }
             } else {
-                lightboxImageWidth = metadata.width;
+                if (metadata.width > LANDSCAPE_LIGHTBOX_IMAGE_WIDTH) {
+                    lightboxImageWidth = LANDSCAPE_LIGHTBOX_IMAGE_WIDTH;
+                } else {
+                    lightboxImageWidth = metadata.width;
+                }
             }
-        } else {
-            if (metadata.width > LANDSCAPE_LIGHTBOX_IMAGE_WIDTH) {
-                lightboxImageWidth = LANDSCAPE_LIGHTBOX_IMAGE_WIDTH;
-            } else {
-                lightboxImageWidth = metadata.width;
-            }
-        }
 
         const options = {
             formats: ['jpeg'],
@@ -62,6 +66,12 @@ module.exports = function (eleventyConfig) {
         `.replace(/(\r\n|\n|\r)/gm, "");
     });
 
+    eleventyConfig.addCollection("futureFixtures", function(collectionApi) {
+        return collectionApi.getFilteredByTag("fixtures").filter(function(fixture) {
+            return fixture.date > new Date();
+        });
+      });
+   
     return {
         dir: {
             input: "src",
