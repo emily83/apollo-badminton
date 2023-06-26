@@ -317,6 +317,7 @@ header.hero {
   text-align: center;
   font-size: var(--fs-100);
   padding: 0.3rem;
+  margin-bottom: 0;
 }
 
 
