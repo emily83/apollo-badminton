@@ -5,41 +5,60 @@ layout: 'base.njk'
 
 <section class="page-content">
   <h1>{{ title }}</h1>
-  <form id="contact-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
-      <p class="hidden">
-    <label>
-      Don’t fill this out if you’re human: <input name="bot-field" />
-    </label>
-  </p>
-    <p>
-      <label>Name: <input type="text" name="name" maxlength="10"/></label>
-    </p>
-    <p>
-      <label>Email: <input type="email" name="email"/></label>
-    </p>
-    <p>
-      <label>Message:
-        <textarea name="message"></textarea>
+  <p id="contact-para">If you'd like to contact us, please either fill in the contact form, or phone one of our committee
+    members directly. We'd be delighted to hear from you and will be in touch very soon.</p>
+  <div id="contact-main">
+    <div id="contact-cards-container">
+      {% for contact in helpers.contacts %}
+        {% include 'contact-card.njk' %}
+      {% endfor %}
+    </div>
+    <form id="contact-form" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+      <label class="hidden">
+        Don’t fill this out if you’re human: <input name="bot-field"/>
       </label>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
+      <div class="input-section-outer">
+        <div class="input-section">
+          <input type="text" name="name" class="textbox" id="contact-form-name" placeholder=" "/>
+          <label for="contact-form-name" class="input-label">Name</label>
+        </div>
+        <div id="contact-form-name-error" class="error"></div>
+      </div>
+      <div class="input-section-outer">
+        <div class="input-section">
+          <input type="text" name="email" class="textbox" id="contact-form-email" placeholder=" "/>
+          <label for="contact-form-email" class="input-label">Email</label>
+        </div>
+        <div id="contact-form-email-error" class="error"></div>
+      </div>
+      <div class="input-section-outer">
+        <div class="input-section">
+          <textarea name="message" class="textarea" id="contact-form-message" placeholder=" "></textarea>
+          <label for="contact-form-message" class="input-label">Message</label>
+        </div>
+        <div id="contact-form-message-error" class="error"></div>
+      </div>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </div>
 </section>
 <section class="find-us">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9986.69521311774!2d1.0889657508064086!3d51.26191507164068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47deca215765555f%3A0x80cab6f762a99b9b!2sApollo%20Badminton%20Club!5e0!3m2!1sen!2suk!4v1687243491755!5m2!1sen!2suk"
-    width="400"
-    height="350"
-    style="border:0;"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <section class="find-us-info">
-    <h2>How To Find Us</h2>
-    <p>We play at St Anselms School Sports Hall, behind the school in the large green building. Look out for a big sign on
-      the neaby roadside fence.</p>
-    <img src="/assets/apollo-sign.jpg" alt="Sign">
+  <section class="find-us-inner">
+    <div class="map-wrapper">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9986.69521311774!2d1.0889657508064086!3d51.26191507164068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47deca215765555f%3A0x80cab6f762a99b9b!2sApollo%20Badminton%20Club!5e0!3m2!1sen!2suk!4v1687243491755!5m2!1sen!2suk"
+        width="400"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <section class="find-us-info">
+      <h2>How To Find Us</h2>
+      <p>We play at St Anselms School Sports Hall, behind the school in the large green building. Look out for a big sign on
+        the neaby roadside fence.</p>
+      <img src="/assets/apollo-sign.jpg" alt="Sign"></section>
+    </section>
   </section>
 </section>
