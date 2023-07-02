@@ -1,0 +1,15 @@
+--- 
+title: News 
+layout: 'base.njk' 
+---
+
+<section class="page-content">
+  <h1>{{ title }}</h1>
+  <ul class="news-article-list" role="list">
+    {% for article in collections.articles | reverse %}
+      {% set paragraphs = article.content | trimTags('<p>', '</p>') | split('</p>') %}
+      {% set firstParagraph = paragraphs | shift %}
+      {% include 'article-snippet.njk' %}
+    {% endfor %}
+  </ul>
+</div>

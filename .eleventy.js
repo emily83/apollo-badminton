@@ -20,7 +20,7 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addFilter("postDateDay", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy");
-      });
+    });
 
     eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt) {
         if (alt === undefined) {
@@ -67,12 +67,25 @@ module.exports = function (eleventyConfig) {
         `.replace(/(\r\n|\n|\r)/gm, "");
     });
 
-    eleventyConfig.addCollection("futureFixtures", function(collectionApi) {
-        return collectionApi.getFilteredByTag("fixtures").filter(function(fixture) {
+    eleventyConfig.addCollection("futureFixtures", function (collectionApi) {
+        return collectionApi.getFilteredByTag("fixtures").filter(function (fixture) {
             return fixture.date > new Date();
         });
-      });
-   
+    });
+
+    eleventyConfig.addFilter('split', function (input, delimiter) {
+        return input.split(delimiter);
+    });
+
+    eleventyConfig.addFilter('trimTags', function (input, startTag, endTag) {
+        const regex = new RegExp(`${startTag}|${endTag}`, 'g');
+        return input.replace(regex, '');
+    });
+
+    eleventyConfig.addFilter('shift', function (input) {
+        return input.shift();
+    });
+
     return {
         dir: {
             input: "src",

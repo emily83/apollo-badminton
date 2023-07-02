@@ -356,7 +356,6 @@ header.hero {
   box-shadow: 5px 5px 10px var(--clr-neutral-800);
   flex-basis: fit-content;
   flex-grow: 1;
-  contain-intrinsic-block-size: ;
   color: var(--clr-neutral-100);
   text-align: center;
   display: flex;
@@ -488,6 +487,76 @@ header.hero {
   grid-row: 1;
   text-align: left;
 }
+
+
+/* //////////////////////
+  News Articles
+  /////////////////////// */
+
+.news-article-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4vw;
+  margin-top: 3vw;
+}
+
+.news-article {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto 1fr auto;
+  column-gap: 2vw;
+}
+
+.news-article-image {
+  grid-column: 1;
+  grid-row: 1 / span 4;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.news-article>* {
+  flex: 1;
+  min-width: 0;
+}
+
+.news-article-title {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.news-article-title a {
+  grid-column: 2;
+  grid-row: 2;
+  display: block;
+  text-decoration: none;
+  color: var(--clr-primary-500);
+  margin-bottom: 5px;
+}
+
+.news-article-meta {
+  font-size: var(--fs-200);
+  font-weight: var(--fw-600);
+  color: var(--clr-neutral-200);
+  margin-bottom: 1vw;
+}
+
+.news-article-body {
+  grid-column: 2;
+  grid-row: 3;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: fit-content;
+  margin-bottom: 1vw;
+}
+
+.news-article-continue {
+  grid-column: 2;
+  grid-row: 4;
+  width: fit-content;
+}
+
 
 /* //////////////////////
   Conctact Us
@@ -756,6 +825,13 @@ header.hero {
   font-family: Arial;
 }
 
+@media (max-width: 900px) {
+
+  .news-article-body {
+    -webkit-line-clamp: 4;
+  }
+
+}
 
 @media (max-width: 768px) {
 
@@ -823,9 +899,28 @@ header.hero {
     gap: 2rem;
   }
 
-
+  .news-article-body {
+    -webkit-line-clamp: 3;
+  }
 
 }
+
+@media (max-width:650px) {
+
+  .news-article-image {
+    aspect-ratio: 5/4;
+  }
+
+}
+
+@media (max-width:580px) {
+
+  .news-article-image {
+    aspect-ratio: 1;
+  }
+
+}
+
 
 @media (max-width: 500px) {
 
@@ -874,6 +969,29 @@ header.hero {
     font-size: var(--fs-400);
   }
 
+  .news-article-list {
+    gap: 10vw;
+  }
+
+  .news-article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .news-article-image {
+    aspect-ratio: 3/2;
+    margin-bottom: 2vw;
+  }
+
+  .news-article-body {
+    -webkit-line-clamp: 5;
+  }
+
+  .news-article-continue {
+    width: 100%;
+    text-align: center;
+  }
+
   #contact-main {
     flex-direction: column;
     gap: 12vw;
@@ -910,7 +1028,7 @@ header.hero {
     width: 100%;
     padding-bottom: 80%;
     order: 2;
-  }  
+  }
 
   .find-us-info {
     order: 1;
