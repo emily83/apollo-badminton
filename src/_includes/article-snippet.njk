@@ -1,15 +1,15 @@
 <li>
-    <article class="news-article">
-        <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}" class="news-article-image"/>
-        <h2 class="news-article-title">
+    <article class="news-article-snippet">
+        <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}" class="news-article-snippet-image"/>
+        <h2 class="news-article-snippet-title">
             <a href="{{ article.url }}">{{ article.data.title }}</a>
         </h2>
-        <p class="news-article-meta">by
+        <p class="news-article-snippet-meta">by
             <span>{{ article.data.author }}</span>
             on
             <span>{{ article.date | postDate }}</span>
         </p>
-        <p class="news-article-body">{{ firstParagraph | safe }}</p>
-        <a href="{{ article.url }}" class="btn news-article-continue">Continue Reading</a>
+        <p class="news-article-snippet-body">{{ firstParagraph | safe }}</p>
+        <a href="{{ article.url }}" class="btn news-article-snippet-continue">Continue Reading</a>
     </article>
 </li>

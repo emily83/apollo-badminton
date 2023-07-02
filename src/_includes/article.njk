@@ -2,19 +2,9 @@
 layout: 'base.njk'
 ---
 
-<article class="main-article">
-  <div class="container container--narrow flow">
-    <h1 class="article-title">
-      {{ title }}
-    </h1>
-    <figure class="main-article__figure">
-      <img src="{{ image }}" alt="{{ imageAlt }}">
-      <figcaption>
-        {{ imageAlt }}
-      </figcaption>
-    </figure>
-
-    {{ content | safe }}
-    
-  </div>
+<article class="page-content news-article">
+  <h1 class="news-article-title">
+    {{ title }}
+  </h1>
+  <img class="news-article-image" src="{{ image }}" alt="{{ imageAlt }}"> {{ content | safe }}
 </article>
