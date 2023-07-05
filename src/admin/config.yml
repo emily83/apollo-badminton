@@ -24,10 +24,10 @@ collections:
     label_singular: "Gallery Image"
     folder: "src/gallery"
     create: true
-    summary: "{{date}}-{{ image }}"
+    summary: "{{ date | date: '%Y-%m-%d' }}-{{ image }}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: true }
       - { label: "Image caption", name: "caption", widget: "string", required: false }
       
   - name: "fixtures"
