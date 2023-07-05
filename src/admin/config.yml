@@ -13,7 +13,7 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Image caption", name: "imageAlt", widget: "string" }
@@ -27,7 +27,7 @@ collections:
     summary: "{{ date | date: '%Y-%m-%d' }}-{{ image }}"
     fields:
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: false }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
       - { label: "Image caption", name: "caption", widget: "string", required: false }
       
   - name: "fixtures"
@@ -37,7 +37,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
     fields: 
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
       - label: "Team"
         name: "team"
         widget: "select"
