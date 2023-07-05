@@ -1,6 +1,6 @@
-<li>
-    <article class="news-article-snippet">
-        <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}" class="news-article-snippet-image"/>
+<article class="news-article-snippet">
+    <img src="{{ article.data.image }}" alt="{{ article.data.imageAlt }}" class="news-article-snippet-image"/>
+    <div class="news-article-snippet-main">
         <h2 class="news-article-snippet-title">
             <a href="{{ article.url }}">{{ article.data.title }}</a>
         </h2>
@@ -9,7 +9,7 @@
             on
             <span>{{ article.date | postDate }}</span>
         </p>
-        <p class="news-article-snippet-body">{{ firstParagraph | safe }}</p>
+        <div class="news-article-snippet-body">{{ article.content | safe }}</div>
         <a href="{{ article.url }}" class="btn news-article-snippet-continue">Continue Reading</a>
-    </article>
-</li>
+    </div>
+</article>

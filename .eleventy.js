@@ -73,19 +73,6 @@ module.exports = function (eleventyConfig) {
         });
     });
 
-    eleventyConfig.addFilter('split', function (input, delimiter) {
-        return input.split(delimiter);
-    });
-
-    eleventyConfig.addFilter('trimTags', function (input, startTag, endTag) {
-        const regex = new RegExp(`${startTag}|${endTag}`, 'g');
-        return input.replace(regex, '');
-    });
-
-    eleventyConfig.addFilter('shift', function (input) {
-        return input.shift();
-    });
-
     return {
         dir: {
             input: "src",

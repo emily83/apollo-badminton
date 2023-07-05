@@ -1,5 +1,5 @@
 ---
-title: First 'Ladies' match report for Apollo!
+title: First 'Ladies' match report!
 author: Lee Funnell
 date: 2019-06-26
 tags: ["article", "featured"]

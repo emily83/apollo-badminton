@@ -5,35 +5,41 @@ hero: false
 ---
 
 <section id="home-hero-container">
-  <img src="assets/racket-and-shuttle.jpg" alt="" class="hero-image">
-</section>
-
-<section id="home-headline-container">
-  <section class="home-headline">
-    <img src="assets/social.jpg" alt="">
-    <h2>Social</h2>
-    <p>Come along to our club nights where  members and non-members can play socially for just £5 per session.</p>
+  <img src="assets/hall.jpg" alt="" class="hero-image"></section>
+  <section id="home-headline-container">
+    <section
+      class="home-headline">
+      <h2>Social</h2>
+      <p>Come along to our club nights where  members and non-members can play socially for just £5 per session.</p>
+      <img src="assets/social.jpg" alt="">
+    </section>
+    <section
+      class="home-headline">
+      <h2>Competitive</h2>
+      <p>During the league season, we field men’s, ladies, mixed and composite league teams in the local North Foreland area.</p>
+      <img src="assets/competitive.jpg" alt="">
+    </section>
+    <section
+      class="home-headline">
+      <h2>Welcoming</h2>
+      <p>We play on Thursday nights from 7:30 - 10p.m. at St Anselms School Sports Hall, Canterbury.</p>
+      <img src="assets/welcoming.jpg" alt="">
+    </section>
   </section>
-  <section class="home-headline">
-    <img src="assets/competitive.jpg" alt="">
-    <h2>Competitive</h2>
-    <p>During the league season, we field men’s, ladies, mixed and composite league teams in the local North Foreland area.</p>
-  </section>
-  <section class="home-headline">
-    <img src="assets/welcoming.jpg" alt="">
-    <h2>Welcoming</h2>
-    <p>We play on Thursday nights from 7:30 - 10p.m. at St Anselms School Sports Hall, Canterbury.</p>
-  </section>
-</section>
-<div class="page-content">
-  <h1>Welcome to Apollo Badminton Club!</h1>
-  <p>We play on Thursday nights from 7:30 to 10:00pm at St Anselms School Sports Hall,
-    behind the school in the large green building with ample parking spaces. Look out for a big sign on the neaby roadside
-    fence. We play on 4 courts during non-school exam times.</p>
-  <p>At our club we play both league and social badminton and welcome new members who wish to play badminton with no
-    pressure to play league but offer the opportunity to play in our teams to those who do. We field men’s teams, mixed
-    teams and composite teams in the local North Foreland Area.</p>
-  <p>The cost of the summer club evenings is £5. You'll need to bring your own racquet and a good safe pair of trainers,
-    all other equipment is supplied. The summer club runs from June until the end of August.</p>
-</div>
-
+  <div class="page-content">
+    <h1>Welcome to Apollo Badminton Club!</h1>
+    <p>We are a friendly club based in Canterbury that welcomes new members for both social badminton and competitive league
+      matches.</p>
+    <p>We play on Thursday nights from 7:30pm to 10:00pm at St Anselms School Sports Hall, behind the school in the large
+      green building, with ample parking spaces. Look out for a big sign on the neaby roadside fence. We have 4 courts
+      available to play on during non-school exam times.</p>
+    <p>Further information can be found on our
+      <a href="/About">About</a>
+      page or please
+      <a href="/Contact">contact us</a> with any questions or queries you have.</p>
+    <p><strong>We look forward to seeing you on the courts!</strong></p>
+  </div>
+  <div class="latest-article-container">
+    {% set article = collections.articles | last %}
+    {% include 'article-snippet.njk' %}
+  </div>

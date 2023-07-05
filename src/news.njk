@@ -7,9 +7,9 @@ layout: 'base.njk'
   <h1>{{ title }}</h1>
   <ul class="news-article-snippet-list" role="list">
     {% for article in collections.articles | reverse %}
-      {% set paragraphs = article.content | trimTags('<p>', '</p>') | split('</p>') %}
-      {% set firstParagraph = paragraphs | shift %}
-      {% include 'article-snippet.njk' %}
+      <li>
+        {% include 'article-snippet.njk' %}
+      </li>
     {% endfor %}
   </ul>
-</div>
+</section>
