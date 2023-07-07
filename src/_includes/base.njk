@@ -10,19 +10,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/style.css">
         <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        <script
+            src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+            crossorigin="anonymous"></script>
         <script src="/main.js"></script>
-        <script type="module">
-            import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
-            const lightbox = new PhotoSwipeLightbox({
-                gallery: '#gallery',
-                children: 'a',
-                pswpModule: () => import ('/photoswipe/photoswipe.esm.js'),
-                bgClickAction: 'close'
-            });
-            lightbox.init();
-        </script>
-        <link rel="stylesheet" href="/photoswipe/photoswipe.css">
+        {% if title == 'Gallery' %}
+            <script type="module">
+                import PhotoSwipeLightbox from '/photoswipe/photoswipe-lightbox.esm.js';
+                const lightbox = new PhotoSwipeLightbox({
+                    gallery: '#gallery',
+                    children: 'a',
+                    pswpModule: () => import ('/photoswipe/photoswipe.esm.js'),
+                    bgClickAction: 'close'
+                });
+                lightbox.init();
+            </script>
+            <link rel="stylesheet" href="/photoswipe/photoswipe.css">
+        {% endif %}
     </head>
     <body>
         {% include 'header.njk' %}
