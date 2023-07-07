@@ -24,11 +24,11 @@ collections:
     label_singular: "Gallery Image"
     folder: "src/gallery"
     create: true
-    slug: "{{ date | date: '%Y-%m-%d' }}-{{ image }}"
+    slug: "{{fields.date}}-{{slug}}"
     fields:
+      - { label: "Title", name: "title", widget: "string", default: "{{fields.image.name}}" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Image caption", name: "caption", widget: "string", required: false }
       
   - name: "fixtures"
     label: "Fixtures"
