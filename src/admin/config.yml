@@ -28,7 +28,6 @@ collections:
     fields:
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Image caption", name: "caption", widget: "string", required: false }
       
   - name: "fixtures"
     label: "Fixtures"
