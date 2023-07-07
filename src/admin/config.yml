@@ -59,3 +59,9 @@ collections:
           - { label: "Racqueteers", value: "RCQ" }
           - { label: "Rovers", value: "ROV" }
           - { label: "Westgate", value: "WST" }
+      - label: "Location"
+        name: "location"
+        widget: "select"
+        options:
+          - { label: "Home", value: "H" }
+          - { label: "Away", value: "A" }
