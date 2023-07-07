@@ -4,18 +4,18 @@ backend:
 media_folder: "public/assets/media"
 public_folder: "/assets/media"
 collections: 
-  - name: "blog"
-    label: "Blog"
-    folder: "src/blog"
+  - name: "article"
+    label: "Articles"
+    label_singular: "Article"
+    folder: "src/articles"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
-      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["articles"] }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Image caption", name: "imageAlt", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }
 

@@ -3,6 +3,7 @@ title: Summer Club Is Here!
 author: Emily Couzens
 date: 2023-07-02
 image: /assets/media/summer-club.jpg
+imageAlt: Ladies Match
 ---
 
 After several weeks at Canterbury Academy, we will be back at St Anselm's on Thursday 13th July with 4 courts to play on!
