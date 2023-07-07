@@ -6,7 +6,7 @@ layout: 'base.njk'
 <section class="page-content">
   <h1>{{ title }}</h1>
   <section id="gallery">
-    {% for item in collections.gallery %}
+    {% for item in collections.gallery | reverse %}
       {% image "./public" + item.data.image, "test" %}
     {% endfor %}
   </section> 
