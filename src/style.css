@@ -286,7 +286,7 @@ header.hero {
 
 .site-footer-section h2 {
   font-size: var(--fs-300);
-  font-weight: var(--fw-400);
+  font-weight: var(--fw-600);
   text-transform: uppercase;
   margin-bottom: 0.5em;
 }
