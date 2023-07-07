@@ -5,7 +5,7 @@ media_folder: "public/assets/media"
 public_folder: "/assets/media"
 collections: 
   - name: "article"
-    label: "Articles"
+    label: "News Articles"
     label_singular: "Article"
     folder: "src/articles"
     create: true
@@ -20,7 +20,7 @@ collections:
       - { label: "Body", name: "body", widget: "markdown" }
 
   - name: "gallery"
-    label: "Gallery"
+    label: "Photo Gallery"
     label_singular: "Gallery Image"
     folder: "src/gallery"
     create: true
