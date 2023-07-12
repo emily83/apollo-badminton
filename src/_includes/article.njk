@@ -6,5 +6,10 @@ layout: 'base.njk'
   <h1 class="news-article-title">
     {{ title }}
   </h1>
+          <p class="news-article-meta">by
+            <span>{{ author }}</span>
+            on
+            <span>{{ date | postDate }}</span>
+        </p>
   <img class="news-article-image" src="{{ image }}" alt="{{ imageAlt }}"> {{ content | safe }}
 </article>
