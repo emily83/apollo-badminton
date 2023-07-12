@@ -385,6 +385,24 @@ header.hero {
   margin-bottom: 0;
 }
 
+.facebook-link {
+  margin-top: 3vw;
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  font-size: clamp(var(--fs-400), 1.5vw, var(--fs-700));
+  border: 5px solid #1778F2;
+  color: #1778F2;
+  padding: 10px;
+  border-radius: 100px;
+  text-underline-offset: 2px;
+  font-weight: var(--fw-600);
+}
+
+.facebook-link img {
+  width: clamp(32px, 6vw, 64px);
+}
+
 .latest-article-container {
   background-color: var(--clr-accent-1);
   padding-block: 2vw;
@@ -1054,6 +1072,10 @@ header.hero {
 
   .home-headline p {
     font-size: var(--fs-400);
+  }
+
+  .facebook-link img {
+    width: 64px;
   }
 
   .about-image-1,
