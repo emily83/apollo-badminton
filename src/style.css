@@ -430,12 +430,14 @@ header.hero {
 #gallery a {
   aspect-ratio: 1;
   box-shadow: 4px 4px 8px rgb(72, 72, 72);
-  border: 2px solid var(--clr-secondary-400);
+  border: 2px solid var(--clr-primary-500);
+  border-radius: 6px;
 }
 
 #gallery a img {
   height: 100%;
   object-fit: cover;
+  border-radius: 4px
 }
 
 
