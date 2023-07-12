@@ -177,6 +177,7 @@ main {
 .page-content {
   width: clamp(700px, 80vw, 80ch);
   margin: 2vw auto;
+  min-height: 300px;
 }
 
 p {

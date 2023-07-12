@@ -6,9 +6,12 @@ layout: 'base.njk'
 <section class="page-content">
   <h1>{{ title }}</h1>
   <ul id="fixtures">
-    {% for fixture in collections.futureFixtures %}
-      {% include 'fixture.njk' %}
-    {% endfor %}
-    
+    {% if collections.futureFixtures|length %}
+      {% for fixture in collections.futureFixtures %}
+        {% include 'fixture.njk' %}
+      {% endfor %}
+    {% else %}
+      Fixtures for the new season will appear here soon!
+    {% endif %}
   </ul>
 </section>
