@@ -9,7 +9,7 @@
             on
             <span>{{ article.date | postDate }}</span>
         </p>
-        <div class="news-article-snippet-body">{{ article.content | safe }}</div>
+        <div class="news-article-snippet-body">{{ article.content | replace('<p>', '')| replace('</p>', '<br><br>') | safe }}</div>
         <a href="{{ article.url }}" class="btn news-article-snippet-continue">Continue Reading</a>
     </div>
 </article>
