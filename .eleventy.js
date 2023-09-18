@@ -19,7 +19,7 @@ module.exports = function (eleventyConfig) {
     })
 
     eleventyConfig.addFilter("postDateDay", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy");
+        return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy T");
     });
 
     eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt) {
