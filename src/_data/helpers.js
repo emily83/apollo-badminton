@@ -15,7 +15,8 @@ const opponents = {
     'HRT': 'Hartsdown Park',
     'RCQ': 'Racqueteers',
     'ROV': 'Rovers',
-    'WST': 'Westgate'
+    'WST': 'Westgate',
+    'WYN': 'Wyndgate'
 }
 
 const contacts = [
