@@ -36,7 +36,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
     fields: 
-      - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: false }
+      - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: true }
       - label: "Team"
         name: "team"
         widget: "select"
@@ -59,6 +59,7 @@ collections:
           - { label: "Racqueteers", value: "RCQ" }
           - { label: "Rovers", value: "ROV" }
           - { label: "Westgate", value: "WST" }
+          - { label: "Wyndgate", value: "WYN" }
       - label: "Location"
         name: "location"
         widget: "select"
