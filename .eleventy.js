@@ -1,8 +1,10 @@
-const { DateTime } = require("luxon");
+const { DateTime, Settings } = require("luxon");
 const sharp = require('sharp');
 const Image = require("@11ty/eleventy-img");
 
-DateTime.local().setZone("Europe/London");
+Settings.defaultZone = 'Europe/London';
+console.log(Settings.defaultZone);
+//DateTime.local().setZone("Europe/London");
 
 const GALLERY_IMAGE_WIDTH = 300;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 1200;
