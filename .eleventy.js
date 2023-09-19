@@ -14,14 +14,15 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/photoswipe');
     eleventyConfig.addPassthroughCopy('./src/main.js');
 
-    DateTime.local().setZone("Europe/London");
+    //DateTime.local().setZone("Europe/London");
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
     })
 
     eleventyConfig.addFilter("postDateDay", (dateObj) => {
-        return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy T");
+        return DateTime.fromJSDate(dateObj).toLocaleString({ weekday: 'short', month: 'short', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }); //=> 'Thu, Apr 20, 11:27 AM'
+        //return DateTime.fromJSDate(dateObj).toFormat("ccc d LLL yyyy T");
     });
 
     eleventyConfig.addNunjucksAsyncShortcode("image", async function (src, alt) {
