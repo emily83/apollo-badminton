@@ -14,7 +14,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/photoswipe');
     eleventyConfig.addPassthroughCopy('./src/main.js');
 
-    //DateTime.local().setZone("Europe/London");
+    DateTime.local().setZone("Europe/London");
 
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED)
