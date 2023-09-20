@@ -33,4 +33,15 @@ $(function () {
 
     });
 
+    $('#team-filter').on('change', function() {
+        const team = $(this).val();
+        $('#fixtures li').each(function(){
+            if ($(this).attr('data-team') === team || team === '') {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+        });
+    });
+
 });

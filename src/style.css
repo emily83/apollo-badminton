@@ -450,6 +450,11 @@ header.hero {
   padding: 0;
 }
 
+#fixture-filters {
+  width: 100%;
+  text-align: right;
+}
+
 .fixture {
   background-color: var(--clr-neutral-300);
   /* border: 2px solid var(--clr-neutral-800); */

@@ -5,6 +5,13 @@ layout: 'base.njk'
 
 <section class="page-content">
   <h1>{{ title }}</h1>
+  <section id="fixture-filters">
+    <select name="team-filter" id="team-filter">
+      <option value="">All Teams</option>
+      <option value="MEN">Mens</option>
+      <option value="MIX">Mixed</option>
+    </select>
+  </section>
   <ul id="fixtures">
     {% if collections.futureFixtures|length %}
       {% for fixture in collections.futureFixtures %}
