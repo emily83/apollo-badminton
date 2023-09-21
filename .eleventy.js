@@ -3,7 +3,6 @@ const sharp = require('sharp');
 const Image = require("@11ty/eleventy-img");
 
 Settings.defaultZone = 'Europe/London';
-console.log(Settings.defaultZone);
 
 const GALLERY_IMAGE_WIDTH = 300;
 const LANDSCAPE_LIGHTBOX_IMAGE_WIDTH = 1200;

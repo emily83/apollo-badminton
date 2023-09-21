@@ -66,3 +66,5 @@ collections:
         options:
           - { label: "Home", value: "H" }
           - { label: "Away", value: "A" }
+      - { label: "Home Score", name: "homeScore", }
+      - { label: "Away Score", name: "awayScore", }
