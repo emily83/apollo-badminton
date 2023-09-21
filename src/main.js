@@ -33,15 +33,27 @@ $(function () {
 
     });
 
+    $('#fixture-tabs li').on('click', function() {
+        const type = $(this).attr('data-type');
+        $('#fixture-tabs li').removeClass('selected');
+        $(this).addClass('selected');
+        filterFixtures();
+    });
+
     $('#team-filter').on('change', function() {
-        const team = $(this).val();
-        $('#fixtures li').each(function(){
-            if ($(this).attr('data-team') === team || team === '') {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
+        filterFixtures();
     });
 
 });
+
+function filterFixtures() {
+    const type = $('#fixture-tabs li.selected').attr('data-type');
+    const team = $('#team-filter').val();
+    $('#fixtures li').each(function(){
+        if (($(this).attr('data-team') === team || team === '') && $(this).attr('data-type') == type) {
+            $(this).removeClass('hide');
+        } else if( !$(this).hasClass('hide')) {
+            $(this).addClass('hide');
+        }
+    });
+}

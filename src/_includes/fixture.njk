@@ -1,8 +1,15 @@
-<li class="fixture" data-team="{{ fixture.data.team }}">
+<li class="fixture{{ ' hide' if helpers.isDateInFuture(fixture.data.date) == false }}" 
+    data-team="{{ fixture.data.team }}" 
+    data-type="{{ 'fixture' if helpers.isDateInFuture(fixture.data.date) else 'result' }}">
   <h3 class="fixture-date">{{ fixture.data.date | postDateDay }}</h3>
   <h2 class="fixture-match">
     {% if fixture.data.location == 'H' %}
-      Apollo vs
+      Apollo 
+      {% if fixture.data.homeScore %}
+        {{ fixture.data.homeScore }} - {{ fixture.data.awayScore }}
+      {% else %}
+        vs
+      {% endif %} 
     {% endif %}   
     <strong>
       {% if fixture.data.opponent in helpers.opponents %}
@@ -12,7 +19,12 @@
       {% endif %}
     </strong>
     {% if fixture.data.location == 'A' %}
-      vs Apollo
+      {% if fixture.data.homeScore %}
+        {{ fixture.data.homeScore }} - {{ fixture.data.awayScore }}
+      {% else %}
+        vs
+      {% endif %} 
+      Apollo
     {% endif %} 
   </h2>
   <span class="fixture-team">

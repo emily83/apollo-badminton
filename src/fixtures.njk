@@ -6,6 +6,10 @@ layout: 'base.njk'
 <section class="page-content">
   <h1>{{ title }}</h1>
   <section id="fixture-filters">
+    <ul id="fixture-tabs">
+      <li class="selected" data-type="fixture">Fixtures</li>
+      <li data-type="result">Results</li>
+    </ul>
     <select name="team-filter" id="team-filter">
       <option value="">All Teams</option>
       <option value="MEN">Mens</option>
@@ -13,8 +17,8 @@ layout: 'base.njk'
     </select>
   </section>
   <ul id="fixtures">
-    {% if collections.futureFixtures|length %}
-      {% for fixture in collections.futureFixtures %}
+    {% if collections.fixtures|length %}
+      {% for fixture in collections.fixtures %}
         {% include 'fixture.njk' %}
       {% endfor %}
     {% else %}

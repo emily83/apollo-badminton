@@ -39,7 +39,12 @@ const contacts = [
 
 const currentYear = () => {
     const today = new Date();
-        return today.getFullYear();
-  }
+    return today.getFullYear();
+}
+
+const isDateInFuture = (date) => {
+    const currentDate = new Date();
+    return date > currentDate;
+}
   
-module.exports = { currentYear, teams, opponents, contacts }
+module.exports = { currentYear, teams, opponents, contacts, isDateInFuture }
