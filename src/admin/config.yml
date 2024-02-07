@@ -79,4 +79,4 @@ collections:
         field: team
         pattern: 'MEN'
     editor:
-     preview: false
+      preview: false
