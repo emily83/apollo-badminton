@@ -35,6 +35,7 @@ collections:
     folder: "src/fixtures"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
+    summary: "{{date}} - {{team}} - {{opponent}}"
     fields: 
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: true }
       - label: "Team"
@@ -68,7 +69,3 @@ collections:
           - { label: "Away", value: "A" }
       - { label: "Home Score", name: "homeScore", required: false }
       - { label: "Away Score", name: "awayScore", required: false }
-      - label: "Title"
-        name: "title"
-        widget: "hidden"  # Hide this field in the CMS UI
-        default: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
