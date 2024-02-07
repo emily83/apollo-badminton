@@ -70,5 +70,5 @@ collections:
       - { label: "Away Score", name: "awayScore", required: false }
       - label: "Title"
         name: "title"
-        # widget: "hidden"  # Hide this field in the CMS UI
+        widget: "hidden"  # Hide this field in the CMS UI
         default: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
