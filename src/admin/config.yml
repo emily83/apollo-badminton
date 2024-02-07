@@ -3,6 +3,7 @@ backend:
   branch: main
 media_folder: "public/assets/media"
 public_folder: "/assets/media"
+logo_url: https://www.apollobadmintoncanterbury.co.uk/assets/shuttlecock.png
 collections: 
   - name: "article"
     label: "News Articles"
@@ -34,9 +35,6 @@ collections:
     label_singular: "Fixture"
     folder: "src/fixtures"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
-    summary: "{{date}} - {{team}} - {{opponent}}"
-     sortable_fields: ['date', 'team', 'opponent']
     fields: 
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: true }
       - label: "Team"
@@ -70,3 +68,15 @@ collections:
           - { label: "Away", value: "A" }
       - { label: "Home Score", name: "homeScore", required: false }
       - { label: "Away Score", name: "awayScore", required: false }
+          slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
+    summary: "{{date}} - {{team}} - {{opponent}}"
+    sortable_fields: ['date', 'team', 'opponent']
+    view_filters:
+      - label: "Mixed"
+        field: team
+        pattern: 'MIX'
+      - label: 'Mens'
+        field: team
+        pattern: 'MEN'
+    editor:
+     preview: false
