@@ -68,7 +68,7 @@ collections:
           - { label: "Away", value: "A" }
       - { label: "Home Score", name: "homeScore", required: false }
       - { label: "Away Score", name: "awayScore", required: false }
-          slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
     summary: "{{date}} - {{team}} - {{opponent}}"
     sortable_fields: ['date', 'team', 'opponent']
     view_filters:
