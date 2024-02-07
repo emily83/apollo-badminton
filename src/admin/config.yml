@@ -69,15 +69,7 @@ collections:
       - { label: "Home Score", name: "homeScore", required: false }
       - { label: "Away Score", name: "awayScore", required: false }
     slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
-    summary: >
-      {% set score_string = "" %}
-      {% if homeScore is defined %}
-        {% set score_string = score_string + homeScore + " - " %}
-      {% endif %}
-      {% if awayScore is defined %}
-        {% set score_string = score_string + awayScore %}
-      {% endif %}
-      {{ date | format('DD/MM/YY') }} - {{team}} - {{opponent}} {{ score_string }}
+    summary: {{ date | format('DD/MM/YY') }} - {{team}} - {{opponent}} - Score: {{ homeScore }} {{ awayScore }}
     sortable_fields: ['date', 'team', 'opponent']
     view_filters:
       - label: "Mixed"
