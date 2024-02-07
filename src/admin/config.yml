@@ -36,6 +36,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{team}}-{{opponent}}"
     summary: "{{date}} - {{team}} - {{opponent}}"
+     sortable_fields: ['date', 'team', 'opponent']
     fields: 
       - { label: "Date", name: "date", widget: "datetime", date_format: "DD/MM/YYYY", time_format: true }
       - label: "Team"
