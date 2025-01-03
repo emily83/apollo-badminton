@@ -1,24 +1,130 @@
-# JAMStack personal blog - starter files
+<a id="readme-top"></a>
 
-These are the starting files used by [Kevin Powell](https://kevinpowell.co) to create a personal blog site for the [Codementor](https://www.codementor.io/) DevProjects Challenge, [Create a fast and secure blog using JAMStack](https://www.codementor.io/projects/web/create-a-fast-and-secure-blog-using-jamstack-c93coupnxb). You are free to use them however you want to get started with the challenge, if you'd like to start working on creating the site without worrying about the content itself.
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/emily83/apollo-badminton">
+    <img src="src/assets/shuttlecock.png" alt="Logo" width="80" height="80">
+  </a>
 
-The provided files are finished pages using regular HTML and CSS. The HTML files can be broken down into peices, and used to build out the different templates and partial files using a templating language of your choice.
+<h3 align="center">Apollo Badminton Club</h3>
 
-The styling of the pages is already complete. That said, the `design-files` folder contains both a Figma file, and .jpg of a design if you want to try to build it from scratch. You do not need to use this design at all either, it depends on how you wish to approach the challenge.
+  <p align="center">
+    Informational website for Apollo Badminton Club, Canterbury
+    <br />
+    <a href="https://github.com/emily83/apollo-badminton"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://www.apollobadmintoncanterbury.co.uk/">View Website</a>
+  </p>
+</div>
 
-The `src` folder contains files so that you can get your project up and running without worrying about content for posts/articles. That folder contains:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#project-architecture">Project Architecture</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-- HTML files to use as a base for the different page layouts. These can be turned into the templates that will be used.
-- CSS file for styling the pages
-- 5 blog articles in the `blog` folder
-- images and a logo in the `assets` folder
+<!-- ABOUT THE PROJECT -->
 
-The articles are written in Markdown, and include Front Matter. Depending on the Static Site Generator you use, it is possible that you will have to modify these a little if you wish to use them. 
+## About The Project
 
-## DevProjects Challenge
+Apollo Badminton Club is a social badminton club in Canterbury, Kent. This repo contains the website which provides information about the club to members and visitors.
 
-As mentioned, these files are here to help get started with a DevProjects challenge. Please visit the [challenge page](#) to learn more about the challenge.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Tutorial
+### Built With
 
-You can [watch this video](https://youtu.be/4wD00RT6d-g) to see how Kevin uses Eleventy, Netlify, and Netlify CMS to create a full-featured blog site built entirely with static files.
+The site is built using the JAMStack:-
+
+SSG - Eleventy (https://www.11ty.dev/)
+Templating - Nunjucks
+CMS - Netlify CMS (https://decapcms.org/)
+
+### Project Architecture
+
+The site uses Eleventy as the Static Site Generator, with Nunjucks for templating. Markdown with front matter is used to hold the data for the site, e.g. the news articles.
+
+The live website is deployed to Netlify which uses continuous deployment so any changes pushed to this GitHub repository will automatically be published.
+
+Netlify CMS (now Decap CMS) is used as contact management for the live site. News articles, match fixtures and gallery images can be added here. The admin panel can be reached at https://www.apollobadmintoncanterbury.co.uk/admin. Users must be invited to register for the admin panel. When content is added here, a commit is added to the GitHub repository so it will be automatically published.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+To get a local copy of the website up and running follow these steps.
+
+### Prerequisites
+
+You will need to have Node.js installed, and the latest version of npm.
+
+- Get the latest version of npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/emily83/apollo-badminton.git
+   ```
+2. Change directory to the newly cloned repo
+   ```sh
+   cd apollo-badminton
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
+4. Change git remote url to avoid accidental pushes to base project
+   ```sh
+   git remote set-url origin emily83/apollo-badminton
+   git remote -v # confirm the changes
+   ```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+To run the website in your development environment, you need to start the server
+
+```sh
+npm start
+```
+
+This will run the website at http://localhost:8080/
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTACT -->
+
+## Contact
+
+Emily Couzens - emilycouzens@hotmail.co.uk
+
+Project Link: [https://github.com/emily83/apollo-badminton](https://github.com/emily83/apollo-badminton)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
