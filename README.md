@@ -48,6 +48,8 @@
 
 Apollo Badminton Club is a social badminton club in Canterbury, Kent. This repo contains the website which provides information about the club to members and visitors.
 
+<img src="src/assets/apollo-badminton-screenshot.jpg" alt="Screenshot">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
@@ -96,11 +98,6 @@ You will need to have Node.js installed, and the latest version of npm.
 3. Install NPM packages
    ```sh
    npm install
-   ```
-4. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin emily83/apollo-badminton
-   git remote -v # confirm the changes
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
