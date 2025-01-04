@@ -56,9 +56,9 @@ Apollo Badminton Club is a social badminton club in Canterbury, Kent. This repo 
 
 The site is built using the JAMStack:-
 
-SSG - Eleventy (https://www.11ty.dev/)
-Templating - Nunjucks
-CMS - Netlify CMS (https://decapcms.org/)
+- SSG - Eleventy (https://www.11ty.dev/)
+- Templating - Nunjucks
+- CMS - Netlify CMS (https://decapcms.org/)
 
 ### Project Architecture
 
