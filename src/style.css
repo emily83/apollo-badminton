@@ -9,7 +9,7 @@
   --fs-800: 5rem;
 
   /* --ff-body: "Roboto", sans-serif; */
-  --ff-body: "Montserrat", sans-serif;
+  --ff-body: 'Montserrat', sans-serif;
   --ff-logo: 'Love Ya Like A Sister', sans-serif;
 
   --fw-200: 200;
@@ -18,7 +18,6 @@
   --fw-600: 600;
   --fw-700: 700;
   --fw-900: 900;
-
 
   --clr-primary-300: rgb(112, 184, 217);
   --clr-primary-400: rgb(84, 154, 186);
@@ -31,7 +30,7 @@
   --clr-secondary-500: #dfe000;
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
-  --clr-neutral-200: #CECECE;
+  --clr-neutral-200: #cecece;
   --clr-neutral-250: #afacac;
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
@@ -43,7 +42,6 @@
   --clr-accent-2: rgb(146 91 213);
   --clr-accent-3: rgb(220 143 51);
   --clr-accent-4: rgb(124, 17, 86);
-
 }
 
 /* 
@@ -83,8 +81,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul:where([role="list"]),
-ol:where([role="list"]) {
+ul:where([role='list']),
+ol:where([role='list']) {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -100,7 +98,6 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-
 }
 
 /* A elements that don't have a class get default styles */
@@ -152,7 +149,6 @@ body {
 h1,
 h2,
 h3 {
-
   line-height: 1.1;
 }
 
@@ -186,7 +182,6 @@ p {
   margin-bottom: 1em;
   text-align: justify;
 }
-
 
 /* //////////////////////
   Header
@@ -321,7 +316,6 @@ header.hero {
   margin-bottom: 0;
 }
 
-
 /* //////////////////////
   Homepage
   /////////////////////// */
@@ -330,7 +324,6 @@ header.hero {
   padding: 0;
   width: 100%;
   aspect-ratio: 3;
-
 }
 
 .hero-image {
@@ -393,8 +386,8 @@ header.hero {
   align-items: center;
   gap: 2vw;
   font-size: clamp(var(--fs-400), 1.5vw, var(--fs-700));
-  border: 5px solid #1778F2;
-  color: #1778F2;
+  border: 5px solid #1778f2;
+  color: #1778f2;
   padding: 10px;
   border-radius: 100px;
   text-underline-offset: 2px;
@@ -415,8 +408,6 @@ header.hero {
   width: clamp(700px, 80vw, 80ch);
   margin: 0 auto;
 }
-
-
 
 /* //////////////////////
   Gallery
@@ -439,9 +430,8 @@ header.hero {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px
+  border-radius: 4px;
 }
-
 
 /* //////////////////////
   Fixtures
@@ -490,7 +480,6 @@ header.hero {
   border-bottom-color: var(--clr-neutral-250);
 }
 
-
 #team-filter {
   position: absolute;
   right: 0;
@@ -515,25 +504,25 @@ header.hero {
   display: none;
 }
 
-.fixture[data-team="MEN"] {
+.fixture[data-team='MEN'] {
   background-color: var(--clr-accent-1);
   /* border: 2px solid rgb(88, 231, 236);
   box-shadow: 5px 5px 10px rgb(27, 99, 101); */
 }
 
-.fixture[data-team="CMP"] {
+.fixture[data-team='CMP'] {
   background-color: var(--clr-accent-2);
   /* border: 2px solid rgb(150, 99, 213);
   box-shadow: 5px 5px 10px rgb(75, 46, 111); */
 }
 
-.fixture[data-team="MIX"] {
+.fixture[data-team='MIX'] {
   background-color: var(--clr-accent-3);
   /* border: 2px solid rgb(236, 169, 88);
   box-shadow: 5px 5px 10px rgb(96, 65, 26); */
 }
 
-.fixture[data-team="LAD"] {
+.fixture[data-team='LAD'] {
   background-color: var(--clr-accent-4);
   /* border: 2px solid rgb(236, 169, 88);
   box-shadow: 5px 5px 10px rgb(96, 65, 26); */
@@ -574,7 +563,6 @@ header.hero {
   text-align: left;
 }
 
-
 /* //////////////////////
   News Article Snippets
   /////////////////////// */
@@ -603,12 +591,13 @@ header.hero {
   flex-direction: column;
 }
 
-.news-article-snippet>* {
+.news-article-snippet > * {
   flex: 1;
   min-width: 0;
 }
 
-.news-article-snippet-title {}
+.news-article-snippet-title {
+}
 
 .news-article-snippet-title a {
   display: block;
@@ -646,8 +635,8 @@ header.hero {
   News Articles
   /////////////////////// */
 
-.news-article {}
-
+.news-article {
+}
 
 .news-article-image {
   aspect-ratio: 3 / 2;
@@ -812,7 +801,7 @@ header.hero {
   transition: 0.2s ease all;
 }
 
-.textarea+.input-label {
+.textarea + .input-label {
   top: 1rem;
   transform: none;
 }
@@ -822,10 +811,10 @@ header.hero {
   outline: 1px solid var(--clr-primary-400);
 }
 
-.textbox:focus+.input-label,
-.textbox:not(:placeholder-shown)+.input-label,
-.textarea:focus+.input-label,
-.textarea:not(:placeholder-shown)+.input-label {
+.textbox:focus + .input-label,
+.textbox:not(:placeholder-shown) + .input-label,
+.textarea:focus + .input-label,
+.textarea:not(:placeholder-shown) + .input-label {
   top: 0.3rem;
   transform: none;
   font-size: var(--fs-200);
@@ -892,6 +881,13 @@ header.hero {
   margin-top: 20px;
 }
 
+.find-us-directions {
+  width: clamp(700px, 80vw, 80ch);
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid var(--clr-neutral-100);
+}
+
 /* //////////////////////
   Privacy Policy
   /////////////////////// */
@@ -938,7 +934,7 @@ header.hero {
 
 #privacy [data-custom-class='link'],
 #privacy [data-custom-class='link'] * {
-  color: #3030F1 !important;
+  color: #3030f1 !important;
   font-size: 14px !important;
   font-family: Arial !important;
   word-break: break-word !important;
@@ -948,11 +944,11 @@ header.hero {
   list-style-type: square;
 }
 
-#privacy ul>li>ul {
+#privacy ul > li > ul {
   list-style-type: circle;
 }
 
-#privacy #privacy ul>li>ul>li>ul {
+#privacy #privacy ul > li > ul > li > ul {
   list-style-type: square;
 }
 
@@ -961,7 +957,6 @@ header.hero {
 }
 
 @media (max-width: 900px) {
-
   .logo {
     font-size: clamp(var(--fs-600), 3.5vw, var(--fs-800));
   }
@@ -969,11 +964,9 @@ header.hero {
   .news-article-snippet-body {
     -webkit-line-clamp: 4;
   }
-
 }
 
 @media (max-width: 768px) {
-
   .page-content {
     margin: 3vw auto;
   }
@@ -986,7 +979,6 @@ header.hero {
   .find-us-inner {
     width: 90%;
   }
-
 
   header {
     position: fixed;
@@ -1019,7 +1011,6 @@ header.hero {
     transition: 0.3s;
     gap: 20px;
     padding: 20px;
-
   }
 
   .nav-menu.active {
@@ -1070,19 +1061,15 @@ header.hero {
   .about-image-2 {
     width: 180px;
   }
-
 }
 
-@media (max-width:650px) {
-
+@media (max-width: 650px) {
   .news-article-snippet-image {
     aspect-ratio: 5/4;
   }
-
 }
 
-@media (max-width:580px) {
-
+@media (max-width: 580px) {
   .news-article-snippet-image {
     aspect-ratio: 1;
   }
@@ -1097,12 +1084,9 @@ header.hero {
     position: static;
     align-self: flex-end;
   }
-
 }
 
-
 @media (max-width: 500px) {
-
   main {
     padding-bottom: 10px;
   }
@@ -1141,7 +1125,6 @@ header.hero {
 
   .home-headline h2 {
     font-size: var(--fs-600);
-
   }
 
   .home-headline p {
@@ -1156,7 +1139,6 @@ header.hero {
   .about-image-2 {
     display: none;
   }
-
 
   .news-article-snippet-list {
     gap: 10vw;
@@ -1227,5 +1209,4 @@ header.hero {
   #contact-para {
     margin-bottom: 20px;
   }
-
 }
