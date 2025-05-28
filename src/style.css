@@ -357,6 +357,24 @@ header.hero {
   Homepage
   /////////////////////// */
 
+#notification-banner {
+  display: flex;
+  padding: 0.25rem 1.5rem;
+  justify-content: center;
+  font-weight: bold;
+  border-bottom: 4px solid var(--clr-secondary-500);
+  background-color: var(--clr-secondary-500);
+  color: white;
+  text-decoration: none;
+  font-size: clamp(var(--fs-300), 2vw, var(--fs-400));
+  text-align: center;
+}
+
+#notification-banner:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
 #home-hero-container {
   padding: 0;
   width: 100%;
