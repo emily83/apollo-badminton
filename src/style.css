@@ -5,12 +5,14 @@
   --fs-400: 1rem;
   --fs-500: 1.125rem;
   --fs-600: 1.5rem;
+  --fs-650: 1.75rem;
   --fs-700: 2rem;
   --fs-800: 5rem;
 
   /* --ff-body: "Roboto", sans-serif; */
   --ff-body: 'Montserrat', sans-serif;
   --ff-logo: 'Love Ya Like A Sister', sans-serif;
+  --ff-logo2: 'Lastica', sans-serif;
 
   --fw-200: 200;
   --fw-300: 300;
@@ -21,13 +23,16 @@
 
   --clr-primary-300: rgb(112, 184, 217);
   --clr-primary-400: rgb(84, 154, 186);
-  --clr-primary-500: hsla(199, 68%, 39%, 1);
+  /* --clr-primary-500: hsla(199, 68%, 39%, 1); */
+  --clr-primary-500: hsla(199, 57%, 50%, 1);
   --clr-primary-500-o: hsla(199 68% 39% / 60%);
   --clr-primary-600: rgb(18, 85, 117);
   --clr-primary-800: rgb(19, 41, 51);
 
-  --clr-secondary-400: #ffff00;
-  --clr-secondary-500: #dfe000;
+  /* --clr-secondary-400: #ffff00; */
+  --clr-secondary-400: #ec7932;
+  /* --clr-secondary-500: #dfe000; */
+  --clr-secondary-500: #e76515;
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-200: #cecece;
@@ -42,6 +47,12 @@
   --clr-accent-2: rgb(146 91 213);
   --clr-accent-3: rgb(220 143 51);
   --clr-accent-4: rgb(124, 17, 86);
+}
+
+@font-face {
+  font-family: 'Lastica';
+  src: url('/assets/fonts/lastica.woff2') format('woff2'),
+    url('/assets/fonts/lastica.woff') format('woff');
 }
 
 /* 
@@ -188,13 +199,15 @@ p {
   /////////////////////// */
 
 header {
-  aspect-ratio: 18;
+  /* aspect-ratio: 18; */
   padding: 0 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 0.5rem;
   background-color: var(--clr-primary-500);
-  border-bottom: 3px solid var(--clr-secondary-400);
+  border-bottom: 4px solid var(--clr-secondary-500);
+  height: 6rem;
 }
 
 /* 
@@ -207,18 +220,42 @@ header.hero {
 } */
 
 .logo {
-  color: var(--clr-neutral-100);
   text-decoration: none;
-  font-family: var(--ff-logo);
-  font-size: clamp(var(--fs-600), 4vw, var(--fs-800));
   display: flex;
   align-items: center;
   gap: 0.3em;
+  padding-left: 2.5rem;
+  position: relative;
 }
 
 .logo img {
-  width: 1em;
-  transform: rotate(324deg);
+  /* width: 4rem; */
+  width: clamp(2rem, 5vw, 4rem);
+  position: absolute;
+  left: 0;
+}
+
+.logo-text {
+  font-family: var(--ff-logo2);
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: var(--clr-neutral-100);
+}
+
+.logo-text-1,
+.logo-text-2 {
+  font-size: clamp(var(--fs-300), 1.5vw, var(--fs-650));
+  text-shadow: 2px 2px 10px black;
+}
+
+.logo-text-3 {
+  font-size: clamp(var(--fs-100), 3vw, var(--fs-100));
+  position: absolute;
+  left: 4rem;
+  bottom: -10px;
+  color: var(--clr-secondary-500);
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 1px black;
 }
 
 .nav-menu {
@@ -335,7 +372,7 @@ header.hero {
 #home-headline-container {
   margin: 0 auto;
   position: relative;
-  top: -8vw;
+  top: -10vw;
   margin-bottom: -6vw;
   display: flex;
   gap: 2vw;
@@ -375,7 +412,7 @@ header.hero {
 }
 
 .home-headline p {
-  font-size: clamp(var(--fs-100), 1.5vw, var(--fs-500));
+  font-size: clamp(var(--fs-100), 1.5vw, var(--fs-400));
   font-weight: var(--fw-300);
   margin-bottom: 0;
 }
@@ -956,10 +993,26 @@ header.hero {
   font-family: Arial;
 }
 
-@media (max-width: 900px) {
-  .logo {
-    font-size: clamp(var(--fs-600), 3.5vw, var(--fs-800));
+@media (min-width: 769px) and (max-width: 1100px) {
+  header {
+    height: 5rem;
   }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .logo-text {
+    line-height: 1;
+  }
+
+  .logo-text-3 {
+    position: static;
+  }
+}
+
+@media (max-width: 900px) {
+  /* .logo {
+    font-size: clamp(var(--fs-500), 3.5vw, var(--fs-700));
+  } */
 
   .news-article-snippet-body {
     -webkit-line-clamp: 4;
@@ -984,10 +1037,11 @@ header.hero {
     position: fixed;
     width: 100%;
     z-index: 1;
+    padding: 0 24px 0 12px;
   }
 
   main {
-    padding-top: 63px;
+    padding-top: 6rem;
   }
 
   nav {
@@ -1000,12 +1054,12 @@ header.hero {
     z-index: 1;
     position: fixed;
     right: -180px;
-    top: 63px;
+    top: 6rem;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--clr-primary-500);
-    border-left: 1px solid var(--clr-secondary-400);
-    border-bottom: 1px solid var(--clr-secondary-400);
+    border-left: 2px solid var(--clr-secondary-400);
+    border-bottom: 2px solid var(--clr-secondary-400);
     width: 180px;
     text-align: right;
     transition: 0.3s;
@@ -1039,8 +1093,32 @@ header.hero {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  .logo {
-    font-size: clamp(var(--fs-600), 6.5vw, var(--fs-700));
+  .logo img {
+    width: 4.5rem;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    margin-top: -10px;
+  }
+
+  .logo-text-1 {
+    font-size: clamp(var(--fs-200), 5vw, var(--fs-600));
+    letter-spacing: 8px;
+  }
+
+  .logo-text-2 {
+    font-size: clamp(var(--fs-100), 3vw, var(--fs-100));
+    line-height: 4px;
+    letter-spacing: 3px;
+  }
+
+  .logo-text-3 {
+    position: absolute;
+    left: 4rem;
+    bottom: -18px;
+    letter-spacing: 4px;
   }
 
   .site-footer-main {
