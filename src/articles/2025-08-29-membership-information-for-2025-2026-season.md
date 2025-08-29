@@ -11,7 +11,7 @@ imageAlt: New season
 
 ### Badminton England registration if you are renewing - £17
 
-### or
+###  or  
 
 ### Badminton England registration if you are a new member - £23.70
 
