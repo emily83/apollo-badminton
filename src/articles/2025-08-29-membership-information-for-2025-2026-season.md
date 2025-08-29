@@ -15,7 +15,7 @@ imageAlt: New season
 
 ### Badminton England registration if you are a new member - £23.70
 
-### Kent fees - £10  
+### Kent fees - £10<br>
 
 
 #### The Badminton England Insurance is mandatory when joining a club. You can pay through Apollo or another club you are a member of.  
