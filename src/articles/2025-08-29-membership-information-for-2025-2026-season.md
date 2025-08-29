@@ -7,19 +7,25 @@ tags:
 image: /assets/media/badminton2526season.jpg
 imageAlt: New season
 ---
-### From September - May fees to Apollo Badminton Club - £125 
+### From September - May fees to Apollo Badminton Club - £125
 
-### Badminton England registration if you are renewing - £17 
+### Badminton England registration if you are renewing - £17
 
 ### or
 
-### Badminton England registration if you are a new member - £23.70 
+### Badminton England registration if you are a new member - £23.70
 
 ### Kent fees - £10
 
+
+
 #### The Badminton England Insurance is mandatory when joining a club. You can pay through Apollo or another club you are a member of.
 
+
+
 Match fees will be £6. Our new match night will be **TUESDAY EVENINGS 7:30-10:00pm**. As our membership has grown and club nights have become busier, we want to reduce the match nights on a Thursday leaving us with just 2 courts for club night. We are hoping to enter 4 teams into the league this year – this will be approximately 22 home matches. There may be the occasional Thursday Match night as a back-up if needed.
+
+
 
 ### Summer club
 
