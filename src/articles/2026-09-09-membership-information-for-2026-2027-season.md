@@ -7,9 +7,9 @@ tags:
 image: /assets/media/new-season.png
 imageAlt: New season
 ---
-# September - May fees to Apollo Badminton Club - £170
+## September - May fees to Apollo Badminton Club - £170
 
-## I﻿ncludes
+### I﻿ncludes
 
 * B﻿adminton England Registration - £16.20 - £18.00
 * K﻿ent fees - £10.00
