@@ -18,6 +18,8 @@ imageAlt: New season
 
 ## B﻿ank Transfer
 
+A﻿pollo Badminton Club
+
 A﻿ccount number: **73757110**
 
 S﻿ort code: **20 17 92**
@@ -26,7 +28,7 @@ S﻿ort code: **20 17 92**
 
 ## **M﻿ore Information**
 
-F﻿or more info, please contact Jo, thW﻿e look forward to welcoming you!e Chairperson, at joguy85@hotmail.co.uk or talk to a committee member at club night: Allan, Jordan, Chris, Odette and Mike.
+F﻿or more info, please contact Jo, the Chairperson, at joguy85@hotmail.co.uk or talk to a committee member at club night: Allan, Jordan, Chris, Odette and Mike.
 
 **<br>**
 
