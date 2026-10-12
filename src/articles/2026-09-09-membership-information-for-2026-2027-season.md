@@ -7,7 +7,7 @@ tags:
 image: /assets/media/new-season.png
 imageAlt: New season
 ---
-## September - May fees to Apollo Badminton Club - £170
+## September - May fees to Apollo Badminton Club - £160
 
 ### I﻿ncludes
 
